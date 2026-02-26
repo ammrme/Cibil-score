@@ -1,0 +1,149 @@
+/* ===== FULL PAGE BACKGROUND ===== */
+
+.result-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* SOLID IDFC RED */
+  background-color: #9D1D27;
+
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* ===== IDFC WATERMARK ===== */
+
+.result-page::before {
+  content: "IDFC";
+  position: absolute;
+  font-size: 200px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: 40px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* ===== GLASS CARD ===== */
+
+.result-card {
+  /* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  padding: 30px 40px;
+  border-radius: 16px;
+  width: 420px;
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+
+  z-index: 2;
+  color: white;
+}
+
+/* Hover glow */
+.result-card:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  transition: 0.3s ease;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* ===== SCORE ===== */
+
+.score {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: white;
+}
+
+.result-card h2 {
+  color: #ffffff;
+}
+
+/* ===== RISK STYLES ===== */
+
+.risk {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* SAFE – GREEN */
+.risk.SAFE {
+  background: rgba(230, 255, 237, 0.9);
+  color: #0a7f2f;
+}
+
+/* MEDIUM – ORANGE */
+.risk.MEDIUM {
+  background: rgba(255, 244, 229, 0.9);
+  color: #b26a00;
+}
+
+/* HIGH RISK – RED */
+.risk.HIGH_RISK {
+  background: rgba(255, 229, 229, 0.9);
+  color: #c20000;
+}
+
+/* REJECT – DARK RED */
+.risk.REJECT {
+  background: rgba(255, 221, 221, 0.9);
+  color: #900000;
+}
+
+/* ===== ANALYSIS TEXT ===== */
+
+.analysis {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.analysis .good {
+  color: #aaffaa;
+  font-weight: bold;
+}
+
+.analysis .warn {
+  color: #ffd27f;
+  font-weight: bold;
+}
+
+.analysis .bad {
+  color: #ff9f9f;
+  font-weight: bold;
+}
+
+/* ===== BUTTON ===== */
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #cb1631;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #1549d6;
+}
